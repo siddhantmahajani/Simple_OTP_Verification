@@ -17,7 +17,7 @@ mailServer.starttls()
 mailServer.login('{authenticationId}', '{authenticationPassword}')
 toEmail = input('Please enter your email: ')
 otpMimeMessage = MIMEText(OTP + " is your One Time Password. Please do not share it with anyone.")
-otpMimeMessage['Subject'] = 'OTP Verification'
+otpMimeMessage['Subject'] = 'One time password'
 otpMimeMessage['From'] = fromEmail
 otpMimeMessage['To'] = toEmail
 mailServer.sendmail(fromEmail, toEmail, otpMimeMessage.as_string())
